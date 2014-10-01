@@ -1,4 +1,4 @@
-package com.theprophet31337.springprojectcreator.ir;
+package com.theprophet31337.filestructurecreator.ir;
 
 import java.util.*;
 
@@ -7,6 +7,8 @@ public class Config
 	private Map<String, String> pathVarMap;
 	private Map<String, List<String>> globalVarMap;
 	private List<PathNode> paths;
+	private char startVariableDelimiter;
+	private char endVariableDelimiter;
 	
 	public Config()
 	{
@@ -62,5 +64,25 @@ public class Config
 	public List<String> getGlobalVarValues(String name)
 	{
 		return globalVarMap.get(name);
+	}
+
+	public char getStartVariableDelimiter()
+	{
+		return startVariableDelimiter;
+	}
+
+	public void setStartVariableDelimiter(char startVariableDelimiter)
+	{
+		this.startVariableDelimiter = startVariableDelimiter;
+	}
+
+	public char getEndVariableDelimiter()
+	{
+		return endVariableDelimiter;
+	}
+
+	public void setEndVariableDelimiter(char endVariableDelimiter)
+	{
+		this.endVariableDelimiter = endVariableDelimiter;
 	}
 }

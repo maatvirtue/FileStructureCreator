@@ -1,10 +1,12 @@
-package com.theprophet31337.springprojectcreator.config;
+package com.theprophet31337.filestructurecreator.config;
 
 import java.io.*;
 import java.util.Map.Entry;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.google.gson.*;
-import com.theprophet31337.springprojectcreator.ir.Config;
+import com.theprophet31337.filestructurecreator.ir.Config;
 
 public class ConfigFileReader
 {
@@ -43,6 +45,20 @@ public class ConfigFileReader
 			//Get structure file path (to parse later)
 			
 			String structureFilePath=root.get("structure").getAsString();
+			
+			//Get variable delimiters
+			
+			if(root.has("startVariableDelimiter"))
+				config.setStartVariableDelimiter(root.get("startVariableDelimiter").getAsCharacter());
+			else
+				config.setStartVariableDelimiter('<');
+			
+			if(root.has("endVariableDelimiter"))
+				config.setEndVariableDelimiter(root.get("endVariableDelimiter").getAsCharacter());
+			else
+				config.setEndVariableDelimiter('>');
+			
+			//asd
 			
 			/* Get path variables. Each variable has a name and a value (both string).
 			 * Replace the slash '/' in the path by the platform specific path seperator.
@@ -83,6 +99,9 @@ public class ConfigFileReader
 		}
 	}
 	
+	/**
+	 * Validate root properties in the configuration file.
+	 */
 	private boolean validate(JsonElement rootElement)
 	{
 		if(!(rootElement instanceof JsonObject))

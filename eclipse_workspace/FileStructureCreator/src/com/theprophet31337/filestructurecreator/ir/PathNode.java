@@ -1,4 +1,4 @@
-package com.theprophet31337.springprojectcreator.ir;
+package com.theprophet31337.filestructurecreator.ir;
 
 import java.io.File;
 

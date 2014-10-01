@@ -1,11 +1,11 @@
-package com.theprophet31337.springprojectcreator.config;
+package com.theprophet31337.filestructurecreator.config;
 
 import java.io.*;
 import java.util.Map.Entry;
 
 import com.google.gson.*;
-import com.theprophet31337.springprojectcreator.ir.Config;
-import com.theprophet31337.springprojectcreator.ir.PathNode;
+import com.theprophet31337.filestructurecreator.ir.Config;
+import com.theprophet31337.filestructurecreator.ir.PathNode;
 
 public class StructureFileReader
 {
@@ -38,7 +38,7 @@ public class StructureFileReader
 		{
 			JsonObject root=(JsonObject)new JsonParser().parse(reader);
 			
-			rcalcPath("", root);
+			rcalcPath(".", root);
 		}
 	}
 	
@@ -73,8 +73,11 @@ public class StructureFileReader
 	
 	private String replacePathVar(String path)
 	{
+		final char startDelimiter=config.getStartVariableDelimiter();
+		final char endDelimiter=config.getEndVariableDelimiter();
+		
 		for(String pathVarName: config.getPathVarNames())
-			path=path.replace("<path:"+pathVarName+">", config.getPathVarValue(pathVarName));
+			path=path.replace(startDelimiter+"path:"+pathVarName+endDelimiter, config.getPathVarValue(pathVarName));
 		
 		return path;
 	}
