@@ -1,0 +1,17 @@
+package %basepackage%.configuration;
+
+import org.springframework.context.annotation.*;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import %basepackage%.validation.CustomValidator;
+
+@Configuration
+@EnableJpaRepositories(basePackages="%basepackage%.data.repository")
+public class ApplicationConfiguration
+{
+	/*@Bean
+	public CustomValidator getCustomValidator()
+	{
+		return new CustomValidator();
+	}*/
+}

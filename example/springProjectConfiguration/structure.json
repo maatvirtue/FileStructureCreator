@@ -1,0 +1,73 @@
+{
+	"%projectName%": {
+		"db": {
+			"%projectName%-structure.sql": null,
+			"%projectName%-initial-data.sql": null
+		},
+		"gradle/wrapper": {
+		},
+		"src/main": {
+			"java/%basepackage%/": {
+				"configuration": {
+					"ApplicationConfiguration.java": "ApplicationConfiguration.template"
+				},
+				"constants": {
+					"Constants.java": "Constants.template"
+				},
+				"data": {
+					"bean": {
+						"input": {},
+						"output": {}
+					},
+					"entity": {},
+					"mapper": {},
+					"repository": {},
+					"storedprocedure": {},
+					"view": {}
+				},
+				"filter": {
+					"CorsFilter.java": "CorsFilter.template"
+				},
+				"shared": {
+					"Crypto.java": "Crypto.template",
+					"SharedUtil.java": "SharedUtil.template"
+				},
+				"service": {
+					"exception": {}
+				},
+				"validation": {},
+				"webservice": {
+					"util": {}
+				}
+			},
+			"resources/%basepackage%": {
+				"applicationContext.xml": "applicationContext.template",
+				"applicationContext-datasource.xml": "applicationContext-datasource.template",
+				"datasource.properties": "datasource.template",
+				"persitence.xml": "persitence.template"
+			}
+		},
+		"WebContent": {
+			"css": {},
+			"html": {
+				"home.html": "home.template"
+			},
+			"images": {},
+			"js": {
+				"lib": {}
+			},
+			"META-INF": {
+				"MANIFEST.MF": "MANIFEST.template"
+			},
+			"WEB-INF": {
+				"web.xml": "web.template",
+				"web-service-v1-servlet.xml": "web-service-v1-servlet.template"
+			},
+			"index.html": "index.template"
+		},
+		".classpath": "classpath.template",
+		".project": "project.template",
+		"build.gradle": "build.template",
+		"gradle.properties": "gradle.template"
+	}
+}

@@ -1,0 +1,48 @@
+package %basepackage%.shared;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class Crypto
+{
+	public static String hashPasswordWithSalt(String password, String salt)
+	{
+		return hashPassword(salt+password);
+	}
+	
+	/**
+	 * Should return a string of 64 chars.
+	 */
+	public static String hashPassword(String password)
+	{
+		return Gen.convertToHex(SHA256(password));
+	}
+	
+	/**
+	 * Should return 32 bytes.
+	 */
+	public static byte[] SHA256(String text)
+	{
+		try
+		{
+			MessageDigest md=MessageDigest.getInstance("SHA-256");
+			
+			md.update(text.getBytes("UTF-8"), 0, text.length());
+			
+			byte[] sha1hash=md.digest();
+			
+			return sha1hash;
+		}
+		catch(NoSuchAlgorithmException e)
+		{
+			//Not supposed to happen
+			throw new RuntimeException(e);
+		}
+		catch(UnsupportedEncodingException e)
+		{
+			//Not supposed to happen
+			throw new RuntimeException(e);
+		}
+	}
+}

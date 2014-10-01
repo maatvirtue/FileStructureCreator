@@ -1,0 +1,18 @@
+package %basepackage%.constants;
+
+public class Constants
+{
+	public static final String APPLICATION_JSON="application/json";
+	public static final String TEXT_PLAIN="text/plain";
+	public static final String AUTHORIZATION="Authorization";
+	public static final String RANGE="Range";
+	public static final String CONTENT_RANGE="Content-Range";
+	public static final String ACCEPT_RANGES="Accept-Ranges";
+	
+	public static int CONFIRMATION_CODE_LEN=10;
+	public static int SALT_LEN=10;
+	public static int DEFAULT_PASS_LEN=10;
+	
+	//public static final String SENDER_EMAIL="";
+	//public static final String SENDER_EMAIL_COMPANY="";
+}

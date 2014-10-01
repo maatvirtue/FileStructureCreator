@@ -1,0 +1,12 @@
+{
+	"structure": "structure.json",
+	"startVariableDelimiter": '%',
+	"endVariableDelimiter": '%',
+	"pathVariables": {
+		"basepackage": "com/sporthub"
+	},
+	"globalVariables": {
+		"projectName": "SportHub",
+		"basepackage": "com.sporthub"
+	}
+}

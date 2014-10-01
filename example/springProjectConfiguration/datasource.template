@@ -1,0 +1,13 @@
+# Database
+db.driverClass=com.mysql.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/%projectName%?noAccessToProcedureBodies=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=1000
+db.username=%projectName%
+db.password=TOCHANGE
+db.dialect=org.hibernate.dialect.MySQL5Dialect
+db.show_sql=false
+
+#Email
+email.host=EMAILHOSTTOCHANGE
+email.port=587
+email.username=USERNAMETOCHANGE
+email.password=PSSWORDTOCHANGE
