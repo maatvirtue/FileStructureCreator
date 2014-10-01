@@ -81,6 +81,16 @@ public class StructureCreator
 		
 		resolvedPaths=resolveMultiValueVariables(nodePath);
 		
+		if(resolvedPaths.size()==0)
+		{
+			//If no multivar then add the single path that this PathNode represent.
+			
+			ResolvedPath regularPath=new ResolvedPath();
+			regularPath.setResolvedPath(nodePath);
+			
+			resolvedPaths.add(regularPath);
+		}
+		
 		//Create paths
 		try
 		{

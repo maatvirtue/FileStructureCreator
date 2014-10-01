@@ -7,7 +7,7 @@
 		"gradle/wrapper": {
 		},
 		"src/main": {
-			"java/%basepackage%/": {
+			"java/%path:basepackage%/": {
 				"configuration": {
 					"ApplicationConfiguration.java": "ApplicationConfiguration.template"
 				},
@@ -40,11 +40,11 @@
 					"util": {}
 				}
 			},
-			"resources/%basepackage%": {
+			"resources/%path:basepackage%": {
 				"applicationContext.xml": "applicationContext.template",
 				"applicationContext-datasource.xml": "applicationContext-datasource.template",
 				"datasource.properties": "datasource.template",
-				"persitence.xml": "persitence.template"
+				"persistence.xml": "persistence.template"
 			}
 		},
 		"WebContent": {
