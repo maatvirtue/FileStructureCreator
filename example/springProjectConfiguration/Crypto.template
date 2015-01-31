@@ -16,7 +16,7 @@ public class Crypto
 	 */
 	public static String hashPassword(String password)
 	{
-		return Gen.convertToHex(SHA256(password));
+		return SharedUtil.convertToHex(SHA256(password));
 	}
 	
 	/**

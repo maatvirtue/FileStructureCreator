@@ -40,7 +40,7 @@
 					"util": {}
 				}
 			},
-			"resources/%path:basepackage%": {
+			"resources": {
 				"applicationContext.xml": "applicationContext.template",
 				"applicationContext-datasource.xml": "applicationContext-datasource.template",
 				"datasource.properties": "datasource.template",
