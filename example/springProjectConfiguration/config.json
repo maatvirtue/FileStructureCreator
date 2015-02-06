@@ -3,10 +3,10 @@
 	"startVariableDelimiter": '%',
 	"endVariableDelimiter": '%',
 	"pathVariables": {
-		"basepackage": "com/sporthub"
+		"basepackage": "net/koiosmedia/websitebase"
 	},
 	"globalVariables": {
-		"projectName": "SportHub",
-		"basepackage": "com.sporthub"
+		"projectName": "WebsiteBase",
+		"basepackage": "net.koiosmedia.websitebase"
 	}
 }

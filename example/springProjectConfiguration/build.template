@@ -2,7 +2,7 @@
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'tomcat'
+apply plugin: 'com.bmuschko.tomcat'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
@@ -55,7 +55,7 @@ buildscript {
 		mavenCentral()
     }
     dependencies {
-        classpath 'org.gradle.api.plugins:gradle-tomcat-plugin:0.9.8' // required
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.0'
     }
 }
 
